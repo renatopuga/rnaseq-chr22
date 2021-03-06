@@ -29,7 +29,7 @@ colnames(vals) <- nomeArqs
 table <- data.frame("gene_id"=umArq[,1],vals)
 
 # arquivo de anotação (transcript -> gene)
-annot <- read.delim("/scratch/projects/chr22/Transcript2Symbol.txt")
+annot <- read.delim("/workspace/rnaseq-chr22/Transcript2Symbol.txt")
 
 # adicionando o nome do gene
 table_annot <- merge(annot, table, by.x=1, by.y=1, all=FALSE)
