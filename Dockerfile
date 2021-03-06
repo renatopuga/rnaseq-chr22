@@ -11,5 +11,6 @@ RUN sudo apt-get update -y \
   && sudo apt-get install -y fastqc samtools bowtie2
 COPY .gitpod.yml run.make.samples.sh run.merge.files.R run.star.rsem.sh Transcript2Symbol.txt ./ 
 COPY reference ./reference 
+COPY input ./input
   
 CMD ["samtools", "fastqc" , "bowtie2"]
