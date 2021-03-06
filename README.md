@@ -1,18 +1,29 @@
 ## Gitpod RNAseq STAR pipeline - chr22 simulado
 
-## Download dos Apss (STAR e RSEM)
+* Pré-requisito instalar o R
 
 ```bash
-mkdir -p apps
-cd apps
-wget -c https://github.com/alexdobin/STAR/archive/2.7.8a.tar.gz
-tar -zxvf 2.7.8a.tar.gz
-
-wget -c https://github.com/deweylab/RSEM/archive/v1.3.3.tar.gz
-tar -zxvf v1.3.3.tar.gz
+brew install r
 ```
 
-## Execudando script `run.dow`
+## Download dos Apss (STAR e RSEM)
+STAR e RSEM para alinhamento e contagem de reads.
+
+> Execudando o script `run.dow.apps.sh`
 ```bash
 sh run.dow.apps.sh 
+```
+## Indexar a referência do `chr22`.
+
+> Executando 
+```bash
+cd reference
+sh makeRef.sh
+```
+
+## Executar o STAR e RSEM
+
+> Executando 
+```bash
+sh run.star.rsem.sh
 ```
