@@ -10,17 +10,17 @@ GTF="$GENOMEDIR/chr22.GRCh37.75.gtf"
 mkdir -p RNASEQ_data
 
 # loop by samples
-for fastqR1 in `ls -1 input/*_1.fq`
+for fastqR1 in `ls -1 input/*_1.fq.gz`
 do
-	# create fastqR2 path
-	fastqR2=$(echo $fastqR1 | sed -e "s/_1.fq/_2.fq/g")
+        # create fastqR2 path
+        fastqR2=$(echo $fastqR1 | sed -e "s/_1.fq.gz/_2.fq.gz/g")
 
-	# make dir sample output dir
-	mkdir "RNASEQ_data/$(basename $fastqR1 _1.fq)"
+        # make dir sample output dir
+        mkdir "RNASEQ_data/$(basename $fastqR1 _1.fq.gz)"
 
-	# run star
-	$STAR --genomeDir $GENOMEDIR \
-	--readFilesIn $fastqR1 $fastqR2 \
+        # run star
+        $STAR --genomeDir $GENOMEDIR \
+        --readFilesCommand zcat \
 	--limitBAMsortRAM 8000000000 \
 	--outSAMtype BAM SortedByCoordinate \
 	--outSAMunmapped Within \
@@ -28,16 +28,16 @@ do
 	--outFilterMultimapNmax  1 \
 	--quantMode TranscriptomeSAM \
 	--runThreadN 4 \
-	--outFileNamePrefix "RNASEQ_data/$(basename $fastqR1 _1.fq)/"; 
+	--outFileNamePrefix "RNASEQ_data/$(basename $fastqR1 _1.fq.gz)/"; 
 
 	# run rsem
-	mkdir "RNASEQ_data/rsem.$(basename $fastqR1 _1.fq)";
+	mkdir "RNASEQ_data/rsem.$(basename $fastqR1 _1.fq.gz)";
 	$RSEM/rsem-calculate-expression --bam --no-bam-output -p 5 \
 	--paired-end \
 	--forward-prob 0 \
-	RNASEQ_data/$(basename $fastqR1 _1.fq)/Aligned.toTranscriptome.out.bam \
+	RNASEQ_data/$(basename $fastqR1 _1.fq.gz)/Aligned.toTranscriptome.out.bam \
 	$GENOMEDIR/rsem/rsem \
-	RNASEQ_data/rsem.$(basename $fastqR1 _1.fq)/rsem; 
+	RNASEQ_data/rsem.$(basename $fastqR1 _1.fq.gz)/rsem; 
 done
 
 # Expression table merge by genes
