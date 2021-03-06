@@ -19,6 +19,7 @@ sh run.down.apps.sh
 ```bash
 cd reference
 sh makeRef.sh
+cd ..
 ```
 
 ## Executar o STAR e RSEM
