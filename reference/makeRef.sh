@@ -14,14 +14,10 @@ $RSEM/rsem-prepare-reference --gtf $GTF \
         rsem/rsem
 
 # caminho do executavel do programa STAR
-GENOMEDIR="/scratch/refs/chr22"
-STAR="/scratch/apps/STAR/bin/Linux_x86_64/STAR"
-RSEM="/scratch/apps/RSEM"
-
 # 1/4 - Generating genome indexes
 $STAR --runThreadN 6 \
        --runMode genomeGenerate \
-       --genomeDir $GENOMEDIR \
+       --genomeDir ./ \
        --genomeFastaFiles $FASTA \
        --sjdbGTFfile $GTF \
        --sjdbOverhang 149
