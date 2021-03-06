@@ -10,7 +10,6 @@ RUN sudo apt-get update -y \
   && sudo DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata \ 
   && sudo apt-get install -y fastqc samtools bowtie2
 COPY .gitpod.yml run.dow.apps.sh run.make.samples.sh run.merge.files.R run.star.rsem.sh Transcript2Symbol.txt ./
-COPY input ./input 
 COPY reference ./reference 
   
 CMD ["samtools", "fastqc" , "bowtie2"]
