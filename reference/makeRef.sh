@@ -5,6 +5,7 @@ RSEM="../apps/RSEM-1.3.3"
 GTF="chr22.GRCh37.75.gtf"
 FASTA="chr22.fa"
 
+gunzip *.gz
 mkdir -p rsem
 
 # rsem: prepare reference
