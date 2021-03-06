@@ -1,6 +1,6 @@
 
-STAR="./apps/STAR-2.7.8a/bin/Linux_x86_64/STAR"
-RSEM="./apps/RSEM-1.3.3"
+STAR="../apps/STAR-2.7.8a/bin/Linux_x86_64/STAR"
+RSEM="../apps/RSEM-1.3.3"
 
 GTF="chr22.GRCh37.75.gtf"
 FASTA="chr22.fa"
