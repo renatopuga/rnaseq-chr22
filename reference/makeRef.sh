@@ -1,12 +1,6 @@
 
-# get reference genome fasta
-#wget -c ftp://ftp.ensembl.org/pub/release-75/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.75.dna.primary_assembly.fa.gz
-
-# get refernece genome gtf
-#wget -c ftp://ftp.ensembl.org/pub/release-75/gtf/homo_sapiens/Homo_sapiens.GRCh37.75.gtf.gz
-
-#gunzip -v Homo_sapiens.GRCh37.75.gtf.gz
-#gunzip -v Homo_sapiens.GRCh37.75.dna.primary_assembly.fa.gz
+STAR="./apps/STAR-2.7.8a/bin/Linux_x86_64/STAR"
+RSEM="./apps/RSEM-1.3.3"
 
 GTF="chr22.GRCh37.75.gtf"
 FASTA="chr22.fa"
@@ -14,7 +8,7 @@ FASTA="chr22.fa"
 mkdir -p rsem
 
 # rsem: prepare reference
-/scratch/apps/RSEM/rsem-prepare-reference --gtf $GTF \
+$RSEM/rsem-prepare-reference --gtf $GTF \
         --bowtie2 \
         $FASTA \
         rsem/rsem
