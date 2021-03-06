@@ -20,6 +20,7 @@ do
 
         # run star
         $STAR --genomeDir $GENOMEDIR \
+	--readFilesIn $fastqR1 $fastqR2 \
         --readFilesCommand zcat \
 	--limitBAMsortRAM 8000000000 \
 	--outSAMtype BAM SortedByCoordinate \
