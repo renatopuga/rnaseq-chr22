@@ -9,13 +9,13 @@ brew install r
 ## Download dos Apss (STAR e RSEM)
 STAR e RSEM para alinhamento e contagem de reads.
 
-> Execudando o script `run.dow.apps.sh`
+> Execudando o script `run.down.apps.sh`
 ```bash
-sh run.dow.apps.sh 
+sh run.down.apps.sh 
 ```
-## Indexar a referência do `chr22`.
+## Indexar a referência do `chr22`
 
-> Executando 
+> Executando script makeRef.sh
 ```bash
 cd reference
 sh makeRef.sh
@@ -23,7 +23,7 @@ sh makeRef.sh
 
 ## Executar o STAR e RSEM
 
-> Executando 
+> Executando script run.star.rsem.sh
 ```bash
 sh run.star.rsem.sh
 ```
