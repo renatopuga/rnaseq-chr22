@@ -116,16 +116,16 @@ merge-table-STAR-transcript-level-10x.txt
 merge-table-STAR-transcript-level-50x.txt
 
 # listar 10 primeiras linhas com comando head
-head merge-table-STAR-transcript-level-10x.txt
+head merge-table-STAR-gene-level-5-50x.txt
 symbol  A01     A02     A03     B01     B02     B03
-ABHD17AP4       5       4       5       7       10      12
-ABHD17AP5       5       3       4       2       4       6
-AC000078.5      6       7       7       6       3       3
-AC000095.9      2       3       2       2       2       2
 AC002472.13     10      9       16      11      14      11
 AC004019.13     23      16      21      16      14      16
-AC004019.18     0       5       6       4       3       3
 AC004471.10     19      26      29      16      11      22
-AC006547.13     7       12      7       5       5       7
+AC006547.14     91      101     81      104     91      76
+AC006946.16     49      45      46      42      37      42
+AC011718.2      37      34      35      25      34      25
+ACR     23      11      18      13      7       16
+ADORA2A-AS1     13      27      19      17      9       18
+ADRBK2  624     661     640     586     575     555
 ```
 
