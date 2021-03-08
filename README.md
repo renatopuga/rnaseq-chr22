@@ -6,12 +6,41 @@
 brew install r
 ```
 
+## Amostras Simuladas do chr22
+
+* `A0*` : Amostras do Grupo A
+* `B0*` : Amostras do Grupo B
+
+```bash
+
+# ir para o diretorio principal
+cd /workspace/rnaseq-chr22
+
+# listar o conteudo do diretoio input/
+# A0* : Amostras do Grupo A
+# B0* : Amostras do Grupo B
+
+ls -1 input/
+A01_1.fq.gz
+A01_2.fq.gz
+A02_1.fq.gz
+A02_2.fq.gz
+A03_1.fq.gz
+A03_2.fq.gz
+B01_1.fq.gz
+B01_2.fq.gz
+B02_1.fq.gz
+B02_2.fq.gz
+B03_1.fq.gz
+B03_2.fq.gz
+```
+
 ## Download dos Apps (STAR e RSEM)
 STAR e RSEM para alinhamento e contagem de reads.
 
 > Execudando o script `run.down.apps.sh`
 ```bash
-# voltar para o diretorio principal
+# ir para o diretorio principal
 cd /workspace/rnaseq-chr22
 
 # rodar script de download e make da referencia chr22
@@ -21,7 +50,7 @@ sh run.down.apps.sh
 
 > Executando script makeRef.sh
 ```bash
-# voltar para o diretorio principal
+# ir para o diretorio principal
 cd /workspace/rnaseq-chr22
 
 # entrar no diretorio reference
@@ -35,7 +64,7 @@ sh makeRef.sh
 
 > Executando script run.star.rsem.sh
 ```bash
-# voltar para o diretorio principal
+# ir para o diretorio principal
 cd /workspace/rnaseq-chr22
 
 # executar STAR (mapping) e RSEM (counting) das sequencias
@@ -48,7 +77,7 @@ sh run.tables.sh
 ## Resultados - `RNASEQ_data`
 
 ```bash
-# voltar para o diretorio principal
+# ir para o diretorio principal
 cd /workspace/rnaseq-chr22
 
 # entrar no diretório de resutlados RNASEQ_data/
@@ -73,7 +102,7 @@ RNASEQ_data/
 ## Tabelas de Contagem `genes e isoforms`
 
 ```bash
-# voltar para o diretorio principal
+# ir para o diretorio principal
 cd /workspace/rnaseq-chr22
 
 # 10x : soma de reads de todas amostras no gene é >= 10
