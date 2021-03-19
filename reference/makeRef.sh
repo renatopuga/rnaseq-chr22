@@ -21,5 +21,6 @@ $STAR --runThreadN 6 \
        --genomeDir ./ \
        --genomeFastaFiles $FASTA \
        --sjdbGTFfile $GTF \
-       --sjdbOverhang 149
+       --sjdbOverhang 149 \
+       --genomeSAindexNbases 11 
 
