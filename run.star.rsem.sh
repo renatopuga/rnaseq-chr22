@@ -26,7 +26,7 @@ do
 	--outSAMtype BAM SortedByCoordinate \
 	--outSAMunmapped Within \
 	--twopassMode Basic \
-	--outFilterMultimapNmax  1 \
+	--outFilterMultimapNmax  4 \
 	--quantMode TranscriptomeSAM \
 	--runThreadN 4 \
 	--outFileNamePrefix "RNASEQ_data/$(basename $fastqR1 _1.fq.gz)/"; 
