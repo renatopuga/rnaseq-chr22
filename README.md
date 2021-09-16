@@ -1,6 +1,6 @@
 ## Gitpod RNAseq STAR pipeline - chr22 simulado
 
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/renatopuga/rnaseq-chr22)
+[![Gitpod ready-to-code](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/renatopuga/rnaseq-chr22)
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gVltwQKdsgOtGDFowGtlVxSA1OBuFiVR?usp=sharing)
 
